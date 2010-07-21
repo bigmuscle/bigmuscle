@@ -63,13 +63,13 @@ static SCORE SPColBrute(const MSA &msa, unsigned uColIndex)
 	for (unsigned uSeqIndex1 = 0; uSeqIndex1 < uSeqCount; ++uSeqIndex1)
 		{
 		const WEIGHT w1 = msa.GetSeqWeight(uSeqIndex1);
-		unsigned uLetter1 = msa.GetLetterEx(uSeqIndex1, uColIndex);
+	/*GET THIS */	unsigned uLetter1 = msa.GetLetterEx(uSeqIndex1, uColIndex);
 		if (uLetter1 >= 20)
 			continue;
 		for (unsigned uSeqIndex2 = 0; uSeqIndex2 < uSeqIndex1; ++uSeqIndex2)
 			{
 			const WEIGHT w2 = msa.GetSeqWeight(uSeqIndex2);
-			unsigned uLetter2 = msa.GetLetterEx(uSeqIndex2, uColIndex);
+	/*GET THIS */		unsigned uLetter2 = msa.GetLetterEx(uSeqIndex2, uColIndex);
 			if (uLetter2 >= 20)
 				continue;
 			SCORE t = w1*w2*(*g_ptrScoreMatrix)[uLetter1][uLetter2];
@@ -89,7 +89,7 @@ static SCORE SPColBrute(const MSA &msa, unsigned uColIndex)
 	}
 
 static SCORE SPGapFreqs(const FCOUNT Freqs[])
-	{
+ 	{
 #if TRACE
 	Log("Freqs=");
 	for (unsigned i = 0; i < 4; ++i)

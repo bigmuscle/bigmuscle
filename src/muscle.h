@@ -1,3 +1,5 @@
+#include "readcomposite.h"
+
 #if	DEBUG && !_DEBUG
 #define _DEBUG	1
 #endif
@@ -270,11 +272,12 @@ FCOUNT SumCounts(const FCOUNT Counts[]);
 
 bool FlagOpt(const char *Name);
 const char *ValueOpt(const char *Name);
-void DoMuscle();
+void DoMuscle(CompositeVect* CVLocation);
 void ProfDB();
 void DoSP();
 void ProgAlignSubFams();
-void Run();
+//void Run();
+void Run(CompositeVect* CVLocation);
 void ListParams();
 void OnException();
 void SetSeqWeightMethod(SEQWEIGHT Method);

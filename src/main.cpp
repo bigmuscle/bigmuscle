@@ -5,6 +5,9 @@
 #ifdef	WIN32
 #include <windows.h>	// for SetPriorityClass()
 #include <io.h>			// for isatty()
+#include "msa.h"
+
+
 #else
 #include <unistd.h>		// for isatty()
 #endif
@@ -16,8 +19,20 @@ const char *MUSCLE_LONG_VERSION	= "MUSCLE v" SHORT_VERSION "."
 int g_argc;
 char **g_argv;
 
+CompositeVect* MSA::CVLocation =0;
+
 int main(int argc, char **argv)
 	{
+	//THESE FUNCTIONS ARE ADAPTATIONS TO THE ORIGINAL MUSCLE
+	
+	CompositeVect CompositeSeq;
+	CompositeSeq = makeComposite();
+	makeBasicInput(CompositeSeq);
+	CompositeVect* CVLocation;
+	CVLocation = &CompositeSeq;
+
+	//END ADAPTATIONS
+
 #if	WIN32
 // Multi-tasking does not work well in CPU-bound
 // console apps running under Win32.
@@ -37,6 +52,8 @@ int main(int argc, char **argv)
 	//extern void TestSubFams(const char *);
 	//TestSubFams(g_pstrInFileName);
 	//return 0;
+	
+	
 
 	if (g_bVersion)
 		{
@@ -57,7 +74,8 @@ int main(int argc, char **argv)
 		{
 		try
 			{
-			Run();
+			//Run();
+			Run(CVLocation);
 			}
 		catch (...)
 			{
@@ -66,7 +84,8 @@ int main(int argc, char **argv)
 			}
 		}
 	else
-		Run();
+		//Run();
+		Run(CVLocation);
 
 	exit(EXIT_Success);
 	}

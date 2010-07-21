@@ -1,3 +1,5 @@
+#include "readcomposite.h"
+
 #ifndef	MSA_h
 #define MSA_h
 
@@ -12,10 +14,14 @@ class DataBuffer;
 class MSA
 	{
 public:
+	
 	MSA();
 	virtual ~MSA();
 
 public:
+//Giving access to the vector of composite sequences
+	static CompositeVect* CVLocation;
+	void SetCompositeVector(CompositeVect* CV);
 // Ways to create an MSA
 	void FromFile(TextFile &File);
 	void FromFASTAFile(TextFile &File);
@@ -127,7 +133,8 @@ private:
 	void SetGSCWeights() const;
 	void SetUniformWeights() const;
 	void SetClustalWWeights(const Tree &tree);
-
+	//This function is for finding where we are in the original CompositeVect
+	//int FindOriginalPosition(int position);
 	void Free();
 	void AppendSeq(char *ptrSeq, unsigned uSeqLength, char *ptrLabel);
 	void ExpandCache(unsigned uSeqCount, unsigned uColCount);
@@ -175,5 +182,7 @@ void MSASubsetByIds(const MSA &msaIn, const unsigned Ids[], unsigned uIdCount,
 void SetMSAWeightsMuscle(MSA &msa);
 void SetClustalWWeightsMuscle(MSA &msa);
 void SetThreeWayWeightsMuscle(MSA &msa);
+
+
 
 #endif	// MSA_h

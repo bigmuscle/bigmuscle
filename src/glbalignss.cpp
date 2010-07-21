@@ -2,20 +2,33 @@
 #include "profile.h"
 #include "pwpath.h"
 #include "seq.h"
+#include "readcomposite.h"
 
 extern SCOREMATRIX VTML_SP;
 
 // #define SUBST(i, j)	Subst(seqA, seqB, i, j)
 #define SUBST(i, j)		MxRowA[i][seqB.GetLetter(j)]
 
-static SCORE Subst(const Seq &seqA, const Seq &seqB, unsigned i, unsigned j)
+static SCORE Subst(const Seq &seqA, const Seq &seqB, unsigned i, unsigned j, CompositeVect compositeSequences)
 	{
 	assert(i < seqA.Length());
 	assert(j < seqB.Length());
 
-	unsigned uLetterA = seqA.GetLetter(i);
-	unsigned uLetterB = seqB.GetLetter(j);
-	return VTML_SP[uLetterA][uLetterB] + g_scoreCenter;
+	const char *nameA = seqA.GetName();
+	int seqnumA = atoi(nameA);
+	const char *nameB = seqB.GetName();
+	int seqnumB = atoi(nameB);
+	Composite* compositeA;
+	compositeA = compositeSequences[seqnumA];
+	Composite* compositeB;
+	compositeB = compositeSequences[seqnumB];
+
+	float compositeScore = pairwiseScore(compositeA, compositeB, i, j, VTML_SP);
+ 
+
+	//unsigned uLetterA = seqA.GetLetter(i);
+	//unsigned uLetterB = seqB.GetLetter(j);
+	return compositeScore + g_scoreCenter;
 	}
 
 struct DP_MEMORY

@@ -24,6 +24,12 @@ MSA::MSA()
 	m_uCacheSeqLength = 0;
 	}
 
+
+void MSA::SetCompositeVector(CompositeVect* CV){
+	CVLocation = CV;
+}
+
+
 MSA::~MSA()
 	{
 	Free();

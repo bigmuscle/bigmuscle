@@ -4,6 +4,8 @@
 #include "profile.h"
 #include "tree.h"
 
+
+
 // These global variables are a hack to allow the tree
 // dependent iteration code to communicate the edge
 // used to divide the tree. The three-way weighting
@@ -20,7 +22,7 @@ void MSA::GetFractionalWeightedCounts(unsigned uColIndex, bool bNormalize,
 	{
 	const unsigned uSeqCount = GetSeqCount();
 	const unsigned uColCount = GetColCount();
-
+	const char* seqName;
 	memset(fcCounts, 0, g_AlphaSize*sizeof(FCOUNT));
 	WEIGHT wTotal = 0;
 	FCOUNT fGap = 0;
@@ -84,8 +86,36 @@ void MSA::GetFractionalWeightedCounts(unsigned uColIndex, bool bNormalize,
 			continue;
 			}
 		unsigned uLetter = GetLetter(uSeqIndex, uColIndex);
-		fcCounts[uLetter] += w;
-		wTotal += w;
+
+		//BEGIN MODIFICATIONS TO MUSCLE
+
+		int original=0;
+		for(unsigned i=0; i<uColIndex; i++){
+			if (i >= this->GetColCount()){break;}
+			++original;
+			char c = GetChar(uSeqIndex, i);
+			if(c== '-'){
+				original--;
+			}
+		}
+		seqName = this->GetSeqName(uSeqIndex);
+		int compositeVectPosition;
+		compositeVectPosition = atoi(seqName);
+		CompositeVect CV = *CVLocation;
+
+		Composite* CVL = CV[compositeVectPosition];
+		Composite C = *CVL;
+		
+		for(int j=0; j<21; j++){
+			fcCounts[j] = w*C[original][j];
+			wTotal = w*C[original][j];
+		}
+
+		//ORIGINAL MUSLCE LINE WAS:
+		//fcCounts[uLetter] += w;
+		//wTotal += w;
+		//END MODIFICATIONS TO MUSCLE
+
 		}
 	*ptrfOcc = (float) (1.0 - fGap);
 
@@ -258,7 +288,6 @@ void SeqVectFromMSA(const MSA &msa, SeqVect &v)
 		v.AppendSeq(s);
 		}
 	}
-
 void DeleteGappedCols(MSA &msa)
 	{
 	unsigned uColIndex = 0;
@@ -272,6 +301,21 @@ void DeleteGappedCols(MSA &msa)
 			++uColIndex;
 		}
 	}
+
+/*
+int FindOriginalPosition(unsigned position){
+	int original=0;
+	for(unsigned i=0; i<position; i++){
+		if (i >= this->GetColCount())
+			break;
+		if (this->IsGapColumn(i));
+		else
+			++original;
+		}
+	
+		return original;
+	}
+*/
 
 void MSAFromSeqSubset(const MSA &msaIn, const unsigned uSeqIndexes[], unsigned uSeqCount,
   MSA &msaOut)

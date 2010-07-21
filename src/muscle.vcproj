@@ -27,7 +27,8 @@
 			<Tool
 				Name="VCPreBuildEventTool"
 				Description="SVN version"
-				CommandLine="c:\cygwin\bin\bash c:/cygwin/bin/svnver"
+				CommandLine=""
+				ExcludedFromBuild="true"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -244,6 +245,14 @@
 			</File>
 			<File
 				RelativePath="color.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\composite.cpp"
+				>
+			</File>
+			<File
+				RelativePath=".\compositevect.cpp"
 				>
 			</File>
 			<File
@@ -619,6 +628,10 @@
 				>
 			</File>
 			<File
+				RelativePath=".\readcomposite.cpp"
+				>
+			</File>
+			<File
 				RelativePath="readmx.cpp"
 				>
 			</File>
@@ -808,6 +821,14 @@
 				>
 			</File>
 			<File
+				RelativePath=".\composite.h"
+				>
+			</File>
+			<File
+				RelativePath=".\compositevect.h"
+				>
+			</File>
+			<File
 				RelativePath="consts.h"
 				>
 			</File>
@@ -881,6 +902,10 @@
 			</File>
 			<File
 				RelativePath="profile.h"
+				>
+			</File>
+			<File
+				RelativePath=".\readcomposite.h"
 				>
 			</File>
 			<File

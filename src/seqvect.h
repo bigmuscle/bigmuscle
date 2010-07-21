@@ -31,6 +31,7 @@ public:
 		ToFASTAFile(File);
 		}
 
+	//std::vector<float*> MakeSequenceComposite(TextFile &File);
 	void PadToMSA(MSA &msa);
 	void Copy(const SeqVect &rhs);
 	void StripGaps();

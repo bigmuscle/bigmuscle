@@ -16,6 +16,7 @@ void SeqVect::Clear()
 		delete (*this)[n];
 	}
 
+
 void SeqVect::ToFASTAFile(TextFile &File) const
 	{
 	unsigned uSeqCount = Length();

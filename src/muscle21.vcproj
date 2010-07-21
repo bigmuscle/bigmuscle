@@ -1,420 +1,601 @@
-<?xml version="1.0" encoding = "Windows-1252"?>
+<?xml version="1.0" encoding="Windows-1252"?>
 <VisualStudioProject
 	ProjectType="Visual C++"
-	Version="7.00"
+	Version="9.00"
 	Name="muscle21"
 	ProjectGUID="{57FBAB99-B961-4B38-B846-CA26D63384F2}"
-	Keyword="Win32Proj">
+	Keyword="Win32Proj"
+	TargetFrameworkVersion="131072"
+	>
 	<Platforms>
 		<Platform
-			Name="Win32"/>
+			Name="Win32"
+		/>
 	</Platforms>
+	<ToolFiles>
+	</ToolFiles>
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
 			OutputDirectory="Debug"
 			IntermediateDirectory="Debug"
 			ConfigurationType="1"
-			CharacterSet="2">
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0400"
-				MinimalRebuild="TRUE"
+				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
-				RuntimeLibrary="5"
+				RuntimeLibrary="1"
 				UsePrecompiledHeader="0"
 				BrowseInformation="1"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
-				DebugInformationFormat="4"/>
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="4"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="psapi.lib"
 				OutputFile="$(OutDir)/muscle21.exe"
 				LinkIncremental="2"
-				GenerateDebugInformation="TRUE"
+				GenerateDebugInformation="true"
 				ProgramDatabaseFile="$(OutDir)/muscle.pdb"
 				SubSystem="1"
-				TargetMachine="1"/>
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 		<Configuration
 			Name="Release|Win32"
 			OutputDirectory="Release"
 			IntermediateDirectory="Release"
 			ConfigurationType="1"
-			CharacterSet="2">
+			InheritedPropertySheets="$(VCInstallDir)VCProjectDefaults\UpgradeFromVC70.vsprops"
+			CharacterSet="2"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				InlineFunctionExpansion="1"
-				OmitFramePointers="TRUE"
+				OmitFramePointers="true"
 				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE;_WIN32_WINNT=0x0400"
-				StringPooling="TRUE"
-				RuntimeLibrary="4"
-				EnableFunctionLevelLinking="TRUE"
+				StringPooling="true"
+				RuntimeLibrary="0"
+				EnableFunctionLevelLinking="true"
 				UsePrecompiledHeader="0"
 				BrowseInformation="1"
 				WarningLevel="3"
-				Detect64BitPortabilityProblems="TRUE"
-				DebugInformationFormat="3"/>
+				Detect64BitPortabilityProblems="true"
+				DebugInformationFormat="3"
+			/>
 			<Tool
-				Name="VCCustomBuildTool"/>
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalDependencies="psapi.lib"
 				OutputFile="$(OutDir)/muscle21.exe"
 				LinkIncremental="1"
-				GenerateDebugInformation="TRUE"
+				GenerateDebugInformation="true"
 				SubSystem="1"
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
-				TargetMachine="1"/>
+				RandomizedBaseAddress="1"
+				DataExecutionPrevention="0"
+				TargetMachine="1"
+			/>
 			<Tool
-				Name="VCMIDLTool"/>
+				Name="VCALinkTool"
+			/>
 			<Tool
-				Name="VCPostBuildEventTool"/>
+				Name="VCManifestTool"
+			/>
 			<Tool
-				Name="VCPreBuildEventTool"/>
+				Name="VCXDCMakeTool"
+			/>
 			<Tool
-				Name="VCPreLinkEventTool"/>
+				Name="VCBscMakeTool"
+			/>
 			<Tool
-				Name="VCResourceCompilerTool"/>
+				Name="VCFxCopTool"
+			/>
 			<Tool
-				Name="VCWebServiceProxyGeneratorTool"/>
+				Name="VCAppVerifierTool"
+			/>
 			<Tool
-				Name="VCWebDeploymentTool"/>
+				Name="VCPostBuildEventTool"
+			/>
 		</Configuration>
 	</Configurations>
+	<References>
+	</References>
 	<Files>
 		<Filter
 			Name="Source Files"
-			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm">
+			Filter="cpp;c;cxx;def;odl;idl;hpj;bat;asm"
+			>
 			<File
-				RelativePath="aligngivenpath.cpp">
+				RelativePath="aligngivenpath.cpp"
+				>
 			</File>
 			<File
-				RelativePath="aligntwoprofs.cpp">
+				RelativePath="aligntwoprofs.cpp"
+				>
 			</File>
 			<File
-				RelativePath="alpha.cpp">
+				RelativePath="alpha.cpp"
+				>
 			</File>
 			<File
-				RelativePath="clust.cpp">
+				RelativePath="clust.cpp"
+				>
 			</File>
 			<File
-				RelativePath="cluster.cpp">
+				RelativePath="cluster.cpp"
+				>
 			</File>
 			<File
-				RelativePath="clwwt.cpp">
+				RelativePath="clwwt.cpp"
+				>
 			</File>
 			<File
-				RelativePath="cons.cpp">
+				RelativePath="cons.cpp"
+				>
 			</File>
 			<File
-				RelativePath="diaglist.cpp">
+				RelativePath="diaglist.cpp"
+				>
 			</File>
 			<File
-				RelativePath="difftreese.cpp">
+				RelativePath="difftreese.cpp"
+				>
 			</File>
 			<File
-				RelativePath="distcalc.cpp">
+				RelativePath="distcalc.cpp"
+				>
 			</File>
 			<File
-				RelativePath="distfunc.cpp">
+				RelativePath="distfunc.cpp"
+				>
 			</File>
 			<File
-				RelativePath="domuscle.cpp">
+				RelativePath="domuscle.cpp"
+				>
 			</File>
 			<File
-				RelativePath="dpreglist.cpp">
+				RelativePath="dpreglist.cpp"
+				>
 			</File>
 			<File
-				RelativePath="edgelist.cpp">
+				RelativePath="edgelist.cpp"
+				>
 			</File>
 			<File
-				RelativePath="enumopts.cpp">
+				RelativePath="enumopts.cpp"
+				>
 			</File>
 			<File
-				RelativePath="enumtostr.cpp">
+				RelativePath="enumtostr.cpp"
+				>
 			</File>
 			<File
-				RelativePath="estring.cpp">
+				RelativePath="estring.cpp"
+				>
 			</File>
 			<File
-				RelativePath="fasta.cpp">
+				RelativePath="fasta.cpp"
+				>
 			</File>
 			<File
-				RelativePath="fastclust.cpp">
+				RelativePath="fastclust.cpp"
+				>
 			</File>
 			<File
-				RelativePath="fastdist.cpp">
+				RelativePath="fastdist.cpp"
+				>
 			</File>
 			<File
-				RelativePath="fastdistmafft.cpp">
+				RelativePath="fastdistmafft.cpp"
+				>
 			</File>
 			<File
-				RelativePath="fastscorepath2.cpp">
+				RelativePath="fastscorepath2.cpp"
+				>
 			</File>
 			<File
-				RelativePath="finddiags.cpp">
+				RelativePath="finddiags.cpp"
+				>
 			</File>
 			<File
-				RelativePath="gatest.cpp">
+				RelativePath="gatest.cpp"
+				>
 			</File>
 			<File
-				RelativePath="glbalign.cpp">
+				RelativePath="glbalign.cpp"
+				>
 			</File>
 			<File
-				RelativePath="glbaligndiag.cpp">
+				RelativePath="glbaligndiag.cpp"
+				>
 			</File>
 			<File
-				RelativePath="glbalignla.cpp">
+				RelativePath="glbalignla.cpp"
+				>
 			</File>
 			<File
-				RelativePath="globals.cpp">
+				RelativePath="globals.cpp"
+				>
 			</File>
 			<File
-				RelativePath="globalslinux.cpp">
+				RelativePath="globalslinux.cpp"
+				>
 			</File>
 			<File
-				RelativePath="globalswin32.cpp">
+				RelativePath="globalswin32.cpp"
+				>
 			</File>
 			<File
-				RelativePath="intmath.cpp">
+				RelativePath="intmath.cpp"
+				>
 			</File>
 			<File
-				RelativePath="main.cpp">
+				RelativePath="main.cpp"
+				>
 			</File>
 			<File
-				RelativePath="makerootmsa.cpp">
+				RelativePath="makerootmsa.cpp"
+				>
 			</File>
 			<File
-				RelativePath="msa.cpp">
+				RelativePath="msa.cpp"
+				>
 			</File>
 			<File
-				RelativePath="msa2.cpp">
+				RelativePath="msa2.cpp"
+				>
 			</File>
 			<File
-				RelativePath="msadistkimura.cpp">
+				RelativePath="msadistkimura.cpp"
+				>
 			</File>
 			<File
-				RelativePath="msf.cpp">
+				RelativePath="msf.cpp"
+				>
 			</File>
 			<File
-				RelativePath="onexception.cpp">
+				RelativePath="onexception.cpp"
+				>
 			</File>
 			<File
-				RelativePath="options.cpp">
+				RelativePath="options.cpp"
+				>
 			</File>
 			<File
-				RelativePath="params.cpp">
+				RelativePath="params.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phy.cpp">
+				RelativePath="phy.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phy2.cpp">
+				RelativePath="phy2.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phy3.cpp">
+				RelativePath="phy3.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phy4.cpp">
+				RelativePath="phy4.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phyfromclust.cpp">
+				RelativePath="phyfromclust.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phyfromfile.cpp">
+				RelativePath="phyfromfile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="phytofile.cpp">
+				RelativePath="phytofile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="posgap.cpp">
+				RelativePath="posgap.cpp"
+				>
 			</File>
 			<File
-				RelativePath="profilefrommsa.cpp">
+				RelativePath="profilefrommsa.cpp"
+				>
 			</File>
 			<File
-				RelativePath="progalign.cpp">
+				RelativePath="progalign.cpp"
+				>
 			</File>
 			<File
-				RelativePath="progress.cpp">
+				RelativePath="progress.cpp"
+				>
 			</File>
 			<File
-				RelativePath="pwpath.cpp">
+				RelativePath="pwpath.cpp"
+				>
 			</File>
 			<File
-				RelativePath="realigndiffse.cpp">
+				RelativePath="realigndiffse.cpp"
+				>
 			</File>
 			<File
-				RelativePath="refinetreee.cpp">
+				RelativePath="refinetreee.cpp"
+				>
 			</File>
 			<File
-				RelativePath="savebest.cpp">
+				RelativePath="savebest.cpp"
+				>
 			</File>
 			<File
-				RelativePath="scoremx.cpp">
+				RelativePath="scoremx.cpp"
+				>
 			</File>
 			<File
-				RelativePath="seq.cpp">
+				RelativePath="seq.cpp"
+				>
 			</File>
 			<File
-				RelativePath="seqvect.cpp">
+				RelativePath="seqvect.cpp"
+				>
 			</File>
 			<File
-				RelativePath="setblosumweights.cpp">
+				RelativePath="setblosumweights.cpp"
+				>
 			</File>
 			<File
-				RelativePath="setgscweights.cpp">
+				RelativePath="setgscweights.cpp"
+				>
 			</File>
 			<File
-				RelativePath="setnewhandler.cpp">
+				RelativePath="setnewhandler.cpp"
+				>
 			</File>
 			<File
-				RelativePath="textfile.cpp">
+				RelativePath="textfile.cpp"
+				>
 			</File>
 			<File
-				RelativePath="traceback.cpp">
+				RelativePath="traceback.cpp"
+				>
 			</File>
 			<File
-				RelativePath="tracebackopt.cpp">
+				RelativePath="tracebackopt.cpp"
+				>
 			</File>
 			<File
-				RelativePath="treefrommsa.cpp">
+				RelativePath="treefrommsa.cpp"
+				>
 			</File>
 			<File
-				RelativePath="typetostr.cpp">
+				RelativePath="typetostr.cpp"
+				>
 			</File>
 			<File
-				RelativePath="upgma2.cpp">
+				RelativePath="upgma2.cpp"
+				>
 			</File>
 			<File
-				RelativePath="usage.cpp">
+				RelativePath="usage.cpp"
+				>
 			</File>
 			<File
-				RelativePath="validateids.cpp">
+				RelativePath="validateids.cpp"
+				>
 			</File>
 			<File
-				RelativePath="vtml2.cpp">
+				RelativePath="vtml2.cpp"
+				>
 			</File>
 		</Filter>
 		<Filter
 			Name="Header Files"
-			Filter="h;hpp;hxx;hm;inl;inc">
+			Filter="h;hpp;hxx;hm;inl;inc"
+			>
 			<File
-				RelativePath="alpha.h">
+				RelativePath="alpha.h"
+				>
 			</File>
 			<File
-				RelativePath="clust.h">
+				RelativePath="clust.h"
+				>
 			</File>
 			<File
-				RelativePath="cluster.h">
+				RelativePath="cluster.h"
+				>
 			</File>
 			<File
-				RelativePath="clustset.h">
+				RelativePath="clustset.h"
+				>
 			</File>
 			<File
-				RelativePath="clustsetdf.h">
+				RelativePath="clustsetdf.h"
+				>
 			</File>
 			<File
-				RelativePath="clustsetmsa.h">
+				RelativePath="clustsetmsa.h"
+				>
 			</File>
 			<File
-				RelativePath="consts.h">
+				RelativePath="consts.h"
+				>
 			</File>
 			<File
-				RelativePath="diaglist.h">
+				RelativePath="diaglist.h"
+				>
 			</File>
 			<File
-				RelativePath="distcalc.h">
+				RelativePath="distcalc.h"
+				>
 			</File>
 			<File
-				RelativePath="distfunc.h">
+				RelativePath="distfunc.h"
+				>
 			</File>
 			<File
-				RelativePath="dpregionlist.h">
+				RelativePath="dpregionlist.h"
+				>
 			</File>
 			<File
-				RelativePath="dpreglist.h">
+				RelativePath="dpreglist.h"
+				>
 			</File>
 			<File
-				RelativePath="edgelist.h">
+				RelativePath="edgelist.h"
+				>
 			</File>
 			<File
-				RelativePath="enumopts.h">
+				RelativePath="enumopts.h"
+				>
 			</File>
 			<File
-				RelativePath="enums.h">
+				RelativePath="enums.h"
+				>
 			</File>
 			<File
-				RelativePath="estring.h">
+				RelativePath="estring.h"
+				>
 			</File>
 			<File
-				RelativePath="gonnet.h">
+				RelativePath="gonnet.h"
+				>
 			</File>
 			<File
-				RelativePath="intmath.h">
+				RelativePath="intmath.h"
+				>
 			</File>
 			<File
-				RelativePath="msa.h">
+				RelativePath="msa.h"
+				>
 			</File>
 			<File
-				RelativePath="msadist.h">
+				RelativePath="msadist.h"
+				>
 			</File>
 			<File
-				RelativePath="muscle.h">
+				RelativePath="muscle.h"
+				>
 			</File>
 			<File
-				RelativePath="objscore.h">
+				RelativePath="objscore.h"
+				>
 			</File>
 			<File
-				RelativePath="params.h">
+				RelativePath="params.h"
+				>
 			</File>
 			<File
-				RelativePath="profile.h">
+				RelativePath="profile.h"
+				>
 			</File>
 			<File
-				RelativePath="scorehistory.h">
+				RelativePath="scorehistory.h"
+				>
 			</File>
 			<File
-				RelativePath="seq.h">
+				RelativePath="seq.h"
+				>
 			</File>
 			<File
-				RelativePath="seqvect.h">
+				RelativePath="seqvect.h"
+				>
 			</File>
 			<File
-				RelativePath="textfile.h">
+				RelativePath="textfile.h"
+				>
 			</File>
 			<File
-				RelativePath="timing.h">
+				RelativePath="timing.h"
+				>
 			</File>
 			<File
-				RelativePath="tree.h">
+				RelativePath="tree.h"
+				>
 			</File>
 			<File
-				RelativePath="types.h">
+				RelativePath="types.h"
+				>
 			</File>
 			<File
-				RelativePath="unixio.h">
+				RelativePath="unixio.h"
+				>
 			</File>
 		</Filter>
 	</Files>

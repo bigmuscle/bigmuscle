@@ -15,7 +15,7 @@ static char g_strUseTreeWarning[] =
 "please refer to the user guide. To disable this\n"
 "warning, use -usetree_nowarn <treefilename>.\n\n";
 
-void DoMuscle()
+void DoMuscle(CompositeVect*CVLocation)
 	{
 	SetOutputFileName(g_pstrOutFileName);
 	SetInputFileName(g_pstrInFileName);
@@ -117,7 +117,7 @@ void DoMuscle()
 // First iteration
 	Tree GuideTree;
 	if (0 != g_pstrUseTreeFileName)
-		{
+	{
 	// Discourage users...
 		if (!g_bUseTreeNoWarn)
 			fprintf(stderr, "%s", g_strUseTreeWarning);
@@ -164,6 +164,7 @@ void DoMuscle()
 	ValidateMuscleIds(GuideTree);
 
 	MSA msa;
+	msa.SetCompositeVector(CVLocation);
 	ProgNode *ProgNodes = 0;
 	if (g_bLow)
 		ProgNodes = ProgressiveAlignE(v, GuideTree, msa);
@@ -235,7 +236,7 @@ void DoMuscle()
 	MuscleOutput(msa);
 	}
 
-void Run()
+void Run(CompositeVect* CVLocation)
 	{
 	SetStartTime();
 	Log("Started %s\n", GetTimeAsStr());
@@ -271,7 +272,7 @@ void Run()
 		DoMakeTree();
 		}
 	else
-		DoMuscle();
+		DoMuscle(CVLocation);
 
 #if	TIMING
 	extern TICKS g_ticksDP;
