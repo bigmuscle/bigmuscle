@@ -1,8 +1,8 @@
+#include "muscle.h"
 #include "textfile.h"
 //#include "msa.h"
 #include "sequencecomposite.h"
 #include "seq.h"
-#include "muscle.h"
 
 int calculateCompositeScore(std::vector<float *> s1, int s1position, std::vector<float*> s2, int s2position){
 

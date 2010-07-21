@@ -2,10 +2,10 @@
 
 #include "muscle.h"
 #include <stdio.h>
+#include "msa.h"
 #ifdef	WIN32
 #include <windows.h>	// for SetPriorityClass()
 #include <io.h>			// for isatty()
-#include "msa.h"
 
 
 #else
